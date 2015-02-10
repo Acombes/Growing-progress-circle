@@ -1,0 +1,28 @@
+<html>
+<head>
+    <style type="text/css"></style>
+    <link href="main.css" rel="stylesheet"/>
+    <link href="http://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet" type="text/css">
+</head>
+<body style="margin:50px;color: white;font-weight:bold;background:#8fd5d5;">
+
+<label for="range">Adjust the progresses:</label>
+<input id="range" type="range" min="0" max="100" style="display: block; width: 50%;"/>
+
+<p>Using custom DOM :</p>
+
+<div>
+    <div class="progress-circle-container" data-value="50">
+        <div class="progress-circle-value"></div>
+    </div>
+</div>
+
+<p>Using of the &lt;progress&gt; tag (only works on Chrome) :<br/>
+    No way to access the widget's actual value from inside the shadow DOM, so there's no possible automatic way to
+    display the value as text from inside the widget</p>
+
+<progress value="50" max="100"></progress>
+
+<script src="main.js"></script>
+</body>
+</html>
